@@ -42,7 +42,9 @@ def load_yaml(filename):
     
 def authenticate(password):
     # Assert that the password is correct
-    assert password == "Iloveyou", "Invalid password!"
+    if password != "Iloveyou":
+        print("Invalid password")
+        return
     print("Successfully authenticated!")
 
 
